@@ -169,3 +169,185 @@ footer {
   height: 315px;
 }
 
+
+
+
+/* ===============================
+   MAIN CONTENT
+================================ */
+
+.main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.section {
+  margin-bottom: 48px;
+}
+
+.section h2 {
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+
+
+/* ===============================
+   ANUNCIOS
+================================ */
+
+.announcements .card {
+  font-size: 1rem;
+}
+
+
+
+/* ===============================
+   ESTADO DEL STREAM
+================================ */
+.stream-status .status {
+  font-weight: 500;
+}
+
+.stream-status .offline {
+  color: #555;
+}
+
+.stream-status .online {
+  color: #e53935;
+}
+
+
+
+
+/* ===============================
+   HORARIOS
+================================ */
+.schedule-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.schedule-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.schedule-list li:last-child {
+  border-bottom: none;
+}
+
+
+
+
+/* ===============================
+   VIDEO DESTACADO
+================================ */
+.video-card {
+  text-align: center;
+  color: #666;
+}
+
+
+
+
+/* ===============================
+   REDES SOCIALES
+================================ */
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 14px 0;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-btn.twitch {
+  background: #9146ff;
+}
+
+.social-btn.youtube {
+  background: #ff0000;
+}
+
+.social-btn.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+
+
+
+/* ===============================
+   QUE ES EVERDANZA
+================================ */
+.about p {
+  max-width: 700px;
+  line-height: 1.6;
+  color: #444;
+}
+
+
+
+
+/* ===============================
+   COMUNIDAD
+================================ */
+
+.community-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.card-link {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f5f5f5;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+
+
+
+/* ===============================
+   AJUSTES RESPONSIVOS
+================================ */
+@media (max-width: 600px) {
+
+  .section h2 {
+    font-size: 1.25rem;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+}
+
+
+
+
+
