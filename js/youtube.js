@@ -29,7 +29,7 @@ function renderYouTubeVideo() {
 
     <div class="youtube-title">${VIDEO_DATA.title}</div>
     <div class="youtube-description">${VIDEO_DATA.description}</div>
-    <div class="youtube-fecha">${VIDEO_DATA.description}</div>
+    <div class="youtube-fecha">${VIDEO_DATA.fecha}</div>
   `;
 }
 
