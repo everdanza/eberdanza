@@ -8,33 +8,148 @@ body {
   background-color: #f4f4f4;
 }
 
-/* ===== HEADER CON IMAGEN ===== */
+
+/* ===============================
+   HEADER EVERDANZA
+================================ */
 
 .header {
   position: relative;
   width: 100%;
-  min-height: 120px;
-
+  height: 140px;
   background-image: url("../imagenes/Picsart_26-02-22_10-41-30-010.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+}
+
+/* Overlay oscuro */
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* Contenedor principal */
+.header-container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
 
   display: flex;
   align-items: center;
-
-  color: white;
+  justify-content: space-between;
 }
 
-nav a {
-  color: white;
-  margin-right: 15px;
+/* ===============================
+   BRAND
+================================ */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
   text-decoration: none;
+  color: #fff;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.brand-logo {
+  height: 64px;
+  width: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  border: 2px solid rgba(255,255,255,0.6);
 }
+
+.brand-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ===============================
+   NAV
+================================ */
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* ===============================
+   HAMBURGUESA
+================================ */
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+  .header {
+    height: 110px;
+  }
+
+  .brand-logo {
+    height: 52px;
+  }
+
+  .brand-text {
+    font-size: 1.3rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 
 main {
   padding: 2rem;
@@ -53,168 +168,4 @@ footer {
   max-width: 560px;
   height: 315px;
 }
-
-
-
-
-
-
-.header {
-  background: #1e1e1e;
-  color: white;
-  padding: 1rem;
-}
-
-.header h1 {
-  margin: 0;
-}
-
-.nav {
-  margin-top: 0.5rem;
-}
-
-.nav a {
-  color: white;
-  margin-right: 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-.footer {
-  text-align: center;
-  padding: 1rem;
-  background: #ddd;
-}
-
-
-
-
-
-/* ===== HEADER ===== */
-
-.header {
-  background: rgba(20, 20, 20, 0.85);
-  backdrop-filter: blur(8px);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0.75rem 1rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* ===== LOGO ===== */
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  text-decoration: none;
-  color: white;
-}
-
-
-.logo img {
-  height: 42px;
-  width: auto;
-}
-
-.logo-text {
-  font-size: 1.2rem;
-  font-weight: bold;
-  letter-spacing: 0.8px;
-}
-
-/* ===== NAV ===== */
-
-.nav {
-  display: flex;
-  gap: 1.2rem;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-/* ===== BOTÓN HAMBURGUESA ===== */
-
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgba(20, 20, 20, 0.95);
-    flex-direction: column;
-    width: 100%;
-    padding: 1rem;
-    display: none;
-  }
-
-  .nav.active {
-    display: flex;
-  }
-
-  .logo-text {
-    display: none; /* solo logo en mobile */
-  }
-}
-
-
-
-
-
-
-
-/* ===== AJUSTES LOGO MOBILE ===== */
-
-@media (max-width: 768px) {
-
-  .header-container {
-    padding: 1rem;
-  }
-
-  .logo img {
-    height: 56px; /* antes 42px */
-  }
-
-  .logo-text {
-    display: inline;
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-
-  }
-
 
