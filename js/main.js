@@ -34,3 +34,13 @@ document.addEventListener("click", (e) => {
   navLinks.classList.toggle("active");
 
 });
+
+document.addEventListener("click", (e) => {
+
+  if (e.target.matches(".nav-links a")) {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.remove("active");
+  }
+
+});
+
