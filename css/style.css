@@ -6,6 +6,7 @@
 body {
   margin: 0;
   background-color: #f4f4f4;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 
@@ -186,11 +187,36 @@ footer {
   margin-bottom: 48px;
 }
 
+/* ===============================
+   SECTION TITLES
+================================ */
+
 .section h2 {
-  margin-bottom: 16px;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1f1f1f;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 14px;
 }
+
+.section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.35)
+  );
+  border-radius: 2px;
+}
+
 
 
 
