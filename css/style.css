@@ -107,10 +107,11 @@ footer {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.8rem;
   text-decoration: none;
   color: white;
 }
+
 
 .logo img {
   height: 42px;
@@ -120,7 +121,7 @@ footer {
 .logo-text {
   font-size: 1.2rem;
   font-weight: bold;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
 }
 
 /* ===== NAV ===== */
@@ -203,3 +204,4 @@ footer {
   }
 
   }
+
