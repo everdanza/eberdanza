@@ -8,9 +8,9 @@ import { getAnalytics } from "firebase/analytics";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyDZU_RioqPL9BBByP58r5VaXNa8tJAwhxc",
-  authDomain: "everdanza.firebaseapp.com",
-  projectId: "everdanza",
-  storageBucket: "everdanza.firebasestorage.app",
+  authDomain: "eberdanza.firebaseapp.com",
+  projectId: "eberdanza",
+  storageBucket: "eberdanza.firebasestorage.app",
   messagingSenderId: "509362704874",
   appId: "1:509362704874:web:e21bb25a341ac7e6c2e293",
   measurementId: "G-PTDSS0TXJV"
