@@ -1,35 +1,33 @@
-const API_KEY = "TU_API_KEY_ACA";
-const VIDEO_URL = "https://www.youtube.com/watch?v=cHfrfyDLfgw";
+const VIDEO_DATA = {
+  url: "https://www.youtube.com/watch?v=cHfrfyDLfgw",
+  title: "Highlight del stream – Everdanza",
+  description: "Un clip destacado del último stream de la comunidad Everdanza."
+};
 
-const videoId = new URL(VIDEO_URL).searchParams.get("v");
-
-async function loadYouTubeVideo() {
-  const container = document.getElementById("youtube-card");
-
-  try {
-    const res = await fetch(
-      `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${API_KEY}`
-    );
-
-    const data = await res.json();
-    const video = data.items[0].snippet;
-
-    container.innerHTML = `
-      <div class="youtube-frame">
-        <iframe 
-          src="https://www.youtube.com/embed/${videoId}"
-          allowfullscreen
-        ></iframe>
-      </div>
-
-      <div class="youtube-title">${video.title}</div>
-      <div class="youtube-description">${video.description}</div>
-    `;
-
-  } catch (err) {
-    container.innerHTML = "<p>Error cargando el video</p>";
-    console.error(err);
-  }
+function getVideoId(url) {
+  return new URL(url).searchParams.get("v");
 }
 
-loadYouTubeVideo();
+function renderYouTubeVideo() {
+  const container = document.getElementById("youtube-card");
+  const videoId = getVideoId(VIDEO_DATA.url);
+
+  if (!videoId) {
+    container.innerHTML = "<p>Video no disponible</p>";
+    return;
+  }
+
+  container.innerHTML = `
+    <div class="youtube-frame">
+      <iframe 
+        src="https://www.youtube.com/embed/${videoId}"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="youtube-title">${VIDEO_DATA.title}</div>
+    <div class="youtube-description">${VIDEO_DATA.description}</div>
+  `;
+}
+
+renderYouTubeVideo();
